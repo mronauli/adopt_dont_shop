@@ -1,0 +1,10 @@
+<% @shelter.pets.each do |pet| %>
+  <h2><%= link_to pet.name, "/pets/#{pet.id}" %></h2>
+  <p><%= image_tag(pet.picture, size: "300x200") %><br>
+  About: <%= pet.description %><br>
+  Age: <%= pet.age %><br>
+  Sex: <%= pet.sex %><br>
+  Adoption Status: <%= pet.adoption_status%><br>
+  <%= link_to "Update Pet", "/pets/#{pet.id}/edit" %><br>
+  <%= link_to "Delete Pet", "/pets/#{pet.id}", method: :delete %>
+<% end %>
