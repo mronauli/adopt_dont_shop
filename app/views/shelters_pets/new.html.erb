@@ -1,0 +1,23 @@
+<%= link_to "All Shelters", "/shelters" %>
+
+<%= form_tag "/shelters/#{@shelter_id}/pets", method: :post do %>
+  <%= label_tag :image %>:
+  <%= file_field_tag :picture, :accept => "image" %><br>
+
+  <%= label_tag :name %>:
+  <%= text_field_tag :name %><br>
+
+  <%= label_tag :description %>:
+  <%= text_field_tag :description %><br>
+
+  <%= label_tag :age %>:
+  <%= text_field_tag :age %><br>
+
+  <%= label_tag :adoption_status %>:
+  <%= text_field_tag :adoption_status %><br>
+
+  <%= label_tag :sex %>:
+  <%= select_tag :sex, raw("<option>female</option><option>male</option>"), multiple: false %><br>
+
+  <%= submit_tag "Create Pet" %>
+<% end %>
