@@ -1,0 +1,11 @@
+<%= link_to "All Shelters", "/shelters" %><br>
+
+<p><%= @pet.name %><br>
+<h1><%= image_tag(@pet.picture, size: "300x200") %></h1><br>
+About: <%= @pet.description %><br>
+Age: <%= @pet.age %><br>
+Sex: <%= @pet.sex %><br>
+Adoption Status: <%= @pet.adoption_status %></p>
+
+<%= link_to "Update Pet", "/pets/#{@pet.id}/edit" %><br>
+<%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
